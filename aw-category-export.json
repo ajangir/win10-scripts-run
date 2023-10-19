@@ -1,0 +1,257 @@
+{
+  "categories": [
+    {
+      "name": [
+        "Work"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "Google Docs|libreoffice|ReText|code",
+        "ignore_case": true
+      },
+      "data": {
+        "color": "#0F0"
+      },
+      "id": 0
+    },
+    {
+      "name": [
+        "Work",
+        "Programming"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "Git|Stack Overflow|BitBucket|vim|Spyder|kate|Ghidra|Scite",
+        "ignore_case": true
+      },
+      "id": 1,
+      "data": {}
+    },
+    {
+      "name": [
+        "Work",
+        "Programming",
+        "ActivityWatch"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "ActivityWatch|aw-",
+        "ignore_case": true
+      },
+      "id": 2,
+      "data": {}
+    },
+    {
+      "name": [
+        "Work",
+        "Image"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "Gimp|Inkscape|imageglass",
+        "ignore_case": true
+      },
+      "id": 3,
+      "data": {}
+    },
+    {
+      "name": [
+        "Work",
+        "Video"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "Kdenlive",
+        "ignore_case": true
+      },
+      "id": 4,
+      "data": {}
+    },
+    {
+      "name": [
+        "Work",
+        "Audio"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "Audacity",
+        "ignore_case": true
+      },
+      "id": 5,
+      "data": {}
+    },
+    {
+      "name": [
+        "Work",
+        "projects"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "ticktick|aj|yaga|msedge",
+        "ignore_case": true
+      },
+      "id": 6,
+      "data": {}
+    },
+    {
+      "name": [
+        "Media",
+        "Games"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "Minecraft|RimWorld",
+        "ignore_case": true
+      },
+      "data": {
+        "color": "#F80"
+      },
+      "id": 7
+    },
+    {
+      "name": [
+        "Media",
+        "Video"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "Plex|VLC|yify|yts|galaxy|ion",
+        "ignore_case": true
+      },
+      "data": {
+        "color": "#F33"
+      },
+      "id": 8
+    },
+    {
+      "name": [
+        "Media",
+        "Social Media"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "reddit|Facebook|Twitter|Instagram|devRant|9gag|4chan",
+        "ignore_case": true
+      },
+      "data": {
+        "color": "#FCC400"
+      },
+      "id": 9
+    },
+    {
+      "name": [
+        "Media",
+        "Music"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "Spotify|Deezer",
+        "ignore_case": true
+      },
+      "data": {
+        "color": "#A8FC00"
+      },
+      "id": 10
+    },
+    {
+      "name": [
+        "Comms"
+      ],
+      "rule": {
+        "type": "none"
+      },
+      "data": {
+        "color": "#AB149E"
+      },
+      "id": 11
+    },
+    {
+      "name": [
+        "Comms",
+        "IM"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "Messenger|Telegram|Signal|WhatsApp|Rambox|Slack|Riot|Element|Discord|Nheko",
+        "ignore_case": true
+      },
+      "id": 12,
+      "data": {}
+    },
+    {
+      "name": [
+        "Comms",
+        "Email"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "Gmail|Thunderbird|mutt|alpine|outlook",
+        "ignore_case": true
+      },
+      "id": 13,
+      "data": {}
+    },
+    {
+      "name": [
+        "Uncategorized"
+      ],
+      "rule": {
+        "type": "none"
+      },
+      "data": {
+        "color": "#CCC"
+      },
+      "id": 14
+    },
+    {
+      "name": [
+        "Media"
+      ],
+      "rule": {
+        "type": "none"
+      },
+      "id": 15,
+      "data": {}
+    },
+    {
+      "name": [
+        "Work",
+        "misc"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "obsi|note|keepass|sticky|calc|terminal|host",
+        "ignore_case": true
+      },
+      "id": 16,
+      "data": {}
+    },
+    {
+      "name": [
+        "Comms",
+        "win10_use"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "explorer|taskmgr|copyq|firefox|setting",
+        "ignore_case": true
+      },
+      "id": 17,
+      "data": {}
+    },
+    {
+      "name": [
+        "Media",
+        "Video",
+        "by type extensions"
+      ],
+      "rule": {
+        "type": "regex",
+        "regex": "mkv|mp4",
+        "ignore_case": true
+      },
+      "id": 18,
+      "data": {}
+    }
+  ]
+}

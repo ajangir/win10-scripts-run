@@ -1,0 +1,1 @@
+adb shell pm list packages | grep sheal | ForEach-Object {write $_; adb shell pm uninstall --user 0 ($_ -replace "package:", "")}
