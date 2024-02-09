@@ -1,0 +1,1 @@
+ls -directory | forEach-Object {echo $_.FullName; cp "$_\2_English.srt" "$_.srt" -verbose}
