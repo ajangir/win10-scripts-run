@@ -9,7 +9,12 @@ for date in range(date_start,date_end+1):
     if count == 7:
         count = 0
         print()
-'''    
+
+0=
+1=
+2=
+
+'''
 import datetime
 
 def print_dates():
