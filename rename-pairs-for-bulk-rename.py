@@ -1,7 +1,9 @@
 '''
+
 format for renaming
-old files name as old_name.srt
+mkv names one per line without extension
 and to_be_named only without extension
+sub files names current
 '''
 
 

@@ -1,6 +1,33 @@
 ﻿#v::Run,cmd /c ""C:\Program Files (x86)\CopyQ\copyq.exe" toggle",,Hide
 #c::Run,cmd /c ""C:\Program Files (x86)\CopyQ\copyq.exe" menu",,Hide
 #n::WinMinimize, A
+,
+; Define a hotkey for Alt+D
+!d::
+    SendInput, {PgDn}
+    Sleep, 2000  ; Sleep for 2 seconds
+
+    ; Press Alt+F
+    SendInput, !f
+    sleep, 4000 ; Sleep for 2 seconds
+
+    SendInput, !{Tab}
+
+    ; Click on specific pixel (adjust x, y coordinates as needed)
+    Click, 800, 435
+    sleep, 2000  ; Optional: small sleep before pressing Enter
+
+    ; Press Enter key
+    SendInput, {Enter}
+
+	sleep, 1000
+	SendInput, !{Tab}
+	sleep, 500
+	click , 1500,990
+
+return
+
+
 
 #Space::
 CoordMode, Mouse, Screen ; This is needed to assure that you get your mouse coordinates related to the screen, not to the window
@@ -37,7 +64,6 @@ If (ErrorLevel)
 }
 return
 ~lButton Up::return
-~mbutton::
-^!x::
+!c::
 SendInput, %current_clip%
 return
