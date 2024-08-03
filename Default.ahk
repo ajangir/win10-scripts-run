@@ -2,19 +2,17 @@
 #c::Run,cmd /c ""C:\Program Files (x86)\CopyQ\copyq.exe" menu",,Hide
 #n::WinMinimize, A
 ,
-; Define a hotkey for Alt+D
+; Define a hotkey for Alt+D to download subtitles in smplayer semi-automatic way
 !d::
-    SendInput, {PgDn}
-    Sleep, 2000  ; Sleep for 2 seconds
-
     ; Press Alt+F
     SendInput, !f
-    sleep, 4000 ; Sleep for 2 seconds
+    sleep, 2000 ; Sleep for 2 seconds
 
     SendInput, !{Tab}
 
     ; Click on specific pixel (adjust x, y coordinates as needed)
-    Click, 800, 435
+
+    Click
     sleep, 2000  ; Optional: small sleep before pressing Enter
 
     ; Press Enter key
@@ -24,11 +22,12 @@
 	SendInput, !{Tab}
 	sleep, 500
 	click , 1500,990
-
+	Sleep, 2000  ; Sleep for 2 seconds
+	SendInput, {PgDn}
 return
 
 
-
+;mouse switch to another screen, second monitor
 #Space::
 CoordMode, Mouse, Screen ; This is needed to assure that you get your mouse coordinates related to the screen, not to the window
 MouseGetPos, MouseX, MouseY
