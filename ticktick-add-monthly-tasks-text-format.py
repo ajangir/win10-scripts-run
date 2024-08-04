@@ -5,7 +5,7 @@ import time
 import pyautogui
 import datetime
 
-START_WEEK_NO=39
+START_WEEK_NO=35
 PRESS_COUNT = 0
 
 def write(text):
@@ -15,14 +15,14 @@ def write(text):
 def press(key,presses=1):
     global PRESS_COUNT
     PRESS_COUNT += 1
-    if PRESS_COUNT > 5:
+    if PRESS_COUNT >= 10:
         scroll_mouse_randomly()
-        time.sleep(5)
+        time.sleep(2)
         PRESS_COUNT = 0
     
     for _ in range(presses):
       pyautogui.press(key)
-      time.sleep(2)
+      time.sleep(1)
   
 def get_week_number_and_days(year, week_number):
     # Get the first day of the week
@@ -77,9 +77,11 @@ def simulate_keystrokes(year,week_number=START_WEEK_NO):
       #press('end')
 def scroll_mouse_randomly():
     #screen_width, screen_height = pyautogui.size()
-    SCROLL_LINES = 5  # Number of lines to scroll
+    SCROLL_LINES = 20  # Number of lines to scroll
+    MAX_SCROLL_DOWN = -999
     scroll_amount = random.choice([SCROLL_LINES, -SCROLL_LINES])
     pyautogui.scroll(scroll_amount)
+    pyautogui.scroll(MAX_SCROLL_DOWN)
     time.sleep(1)
 
 def main():
