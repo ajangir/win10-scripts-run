@@ -22,7 +22,7 @@ def press(key,presses=1):
     
     for _ in range(presses):
       pyautogui.press(key)
-      time.sleep(1)
+      time.sleep(2)
   
 def get_week_number_and_days(year, week_number):
     # Get the first day of the week
@@ -61,20 +61,28 @@ def simulate_keystrokes(year,week_number=START_WEEK_NO):
     for day in week_days:
       pyautogui.hotkey('shift', 'enter')
       time.sleep(1)
+      '''
       str1 = f"0= {day.month}-{day.day} 06:00-12:00"
       str2 = f"1= {day.month}-{day.day} 12:00-18:00"
       str3 = f"2= {day.month}-{day.day} 18:00-23:00"
+      
+      '''
+      str1 = f"0="
+      str2 = f"1="
+      str3 = f"2="
       write(str1)
-      press('enter');press('enter')
+      press('enter')#;press('enter')
       write(str2)
-      press('enter');press('enter')
+      press('enter')#;press('enter')
       write(str3)
-      press('enter')
+      #press('enter')
       press('down')
       #press('end')
       
       #press('down')
       #press('end')
+      return
+
 def scroll_mouse_randomly():
     #screen_width, screen_height = pyautogui.size()
     SCROLL_LINES = 20  # Number of lines to scroll
@@ -83,6 +91,21 @@ def scroll_mouse_randomly():
     pyautogui.scroll(scroll_amount)
     pyautogui.scroll(MAX_SCROLL_DOWN)
     time.sleep(1)
+    return
+
+def removeDateTask():
+    for _ in range(3):
+        pyautogui.hotkey('ctrl','0')
+        time.sleep(2)
+        press('down')
+    return
+
+#remove all task date from 0,1 and 2 task under daily tikcontroller
+def removeDamage():
+    for _ in range(7):
+        press('down')
+        removeDateTask()
+    return
 
 def main():
     # Generate week strings
@@ -90,8 +113,11 @@ def main():
     
     time.sleep(5.0)
     # Simulate keystrokes
-    simulate_keystrokes(year)
+    #simulate_keystrokes(year)
+    removeDamage()
+
     
 
 if __name__ == "__main__":
     main()
+    #removeDamage()
