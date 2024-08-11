@@ -1,4 +1,8 @@
-import argparse
+'''
+go to last done week
+and run script and whenever one week is done
+click on the last done week on left panel
+'''
 import random
 import time
 
@@ -9,7 +13,7 @@ START_WEEK_NO=39
 PRESS_COUNT = 0
 PRESS_DELAY=1
 WRITE_DELAY=1
-HOTKEY_DELAY=3
+HOTKEY_DELAY=2
 
 def write(text):
     pyautogui.write(text)
@@ -119,8 +123,8 @@ def main():
     year = datetime.date.today().year
 
     # Simulate keystrokes
-    START_WEEK = 42
-    END_WEEK = 50
+    START_WEEK = 47
+    END_WEEK = 48
     for i in range(START_WEEK,END_WEEK+1):
         time.sleep(5.0)
         press('enter')
