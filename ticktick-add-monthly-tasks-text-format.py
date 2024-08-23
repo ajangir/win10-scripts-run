@@ -9,7 +9,7 @@ import time
 import pyautogui
 import datetime
 
-START_WEEK_NO=39
+SINGLE_WEEK_NO=39
 PRESS_COUNT = 0
 PRESS_DELAY=1
 WRITE_DELAY=1
@@ -48,7 +48,7 @@ def createNewWeekToGo():
     pyautogui.click(1400, 260)
 
     
-def simulate_keystrokes(year,week_number=START_WEEK_NO):
+def simulate_keystrokes(year,week_number=SINGLE_WEEK_NO):
     
     week_days = get_week_number_and_days(year,week_number)
     start_date = week_days[0]
@@ -61,6 +61,7 @@ def simulate_keystrokes(year,week_number=START_WEEK_NO):
     week_string = f"24{week_number}={start_date_str}-{end_date_str}"
     
     write(week_string)
+    pyautogui.hotkey('alt','3');time.sleep(1)
     createNewWeekToGo()
     # Press shift+enter and print week numbers
     time.sleep(1)
@@ -68,6 +69,7 @@ def simulate_keystrokes(year,week_number=START_WEEK_NO):
     for day in week_days:
       week_number_str = f"{day.day:02d}{day.month:02d} {day.month}-{day.day}"
       write(week_number_str)
+      pyautogui.hotkey('alt','2');time.sleep(1)
       press('enter')
       if day != week_days[-1]:
           press('enter')
@@ -123,8 +125,8 @@ def main():
     year = datetime.date.today().year
 
     # Simulate keystrokes
-    START_WEEK = 47
-    END_WEEK = 48
+    START_WEEK = 50
+    END_WEEK = 52
     for i in range(START_WEEK,END_WEEK+1):
         time.sleep(5.0)
         press('enter')
