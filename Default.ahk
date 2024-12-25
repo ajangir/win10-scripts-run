@@ -12,7 +12,7 @@
 
     if WinExist("Subtitles")
 		WinActivate
-
+    
     ; Click on specific pixel (adjust x, y coordinates as needed)
 
     sleep 2000  ; Optional: small sleep before pressing Enter
