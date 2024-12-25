@@ -52,7 +52,7 @@ return
     ; Check if Task Manager is the active window
     if WinActive("ahk_exe Taskmgr.exe")
     {
-      Delay := 1000
+      Delay := 2000
       ; Get the currently focused control
       FocusedClassNN := ControlGetClassNN(ControlGetFocus("A"))
       ;MsgBox 'Control with focus ClassNN: ' FocusedClassNN

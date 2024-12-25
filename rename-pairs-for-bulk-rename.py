@@ -8,7 +8,6 @@ sub files names current
 
 
 def takeInput():
-    
     arr = []
     while True:
         try:
