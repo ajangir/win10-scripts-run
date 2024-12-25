@@ -45,3 +45,38 @@ MouseMove A_ScreenWidth+960, 540
 }
 return
 }
+
+; Hotkey definition kill tasks - process tree in task manager
+!k::
+{
+    ; Check if Task Manager is the active window
+    if WinActive("ahk_exe Taskmgr.exe")
+    {
+      Delay := 1000
+      ; Get the currently focused control
+      FocusedClassNN := ControlGetClassNN(ControlGetFocus("A"))
+      ;MsgBox 'Control with focus ClassNN: ' FocusedClassNN
+      
+      ; Handling SysListView321 (Process List) kill process tree
+      if (FocusedClassNN = "SysListView321")
+      {
+          ; Right-click, wait, press 't', wait, press Enter
+          Sleep Delay
+          Send "{RButton}"
+          Sleep Delay
+          Send "t"
+          Sleep Delay
+          Send "{Enter}"
+      }
+      
+      ; Handling DirectUIHWND1 (Performance/App tabs)
+      else if (FocusedClassNN = "DirectUIHWND1")
+      {
+          ; Right-click, short delay, press 'e'
+          Send "{RButton}"
+          Sleep Delay
+          Send "e"
+      }
+    }
+    return    
+}
