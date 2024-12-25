@@ -2,6 +2,7 @@
 #Warn
 
 #n::WinMinimize "A"
+^q::send "!{f4}"
 
 ; Define a hotkey for Alt+D to downAltTabload subtitles in smplayer semi-automatic way
 !d::{
