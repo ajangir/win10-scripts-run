@@ -4,6 +4,10 @@
 #n::WinMinimize "A"
 ^q::send "!{f4}"
 
+!v::SendEvent '{Text}' A_Clipboard
+#v::Run 'cmd /c ""C:\Program Files (x86)\CopyQ\copyq.exe" toggle"',"", "Hide"
+#c::Run 'cmd /c ""C:\Program Files (x86)\CopyQ\copyq.exe" menu"',"", "Hide"
+
 ; Define a hotkey for Alt+D to downAltTabload subtitles in smplayer semi-automatic way
 !d::{
     ; Press Alt+f
