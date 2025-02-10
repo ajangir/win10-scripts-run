@@ -12,7 +12,8 @@ function bcp{
 function gs{
     git status
 }
-
+<#
+removed because moved databse to obs-root repo instead of storing it someplace and merging it manually
 function keepass-merge{
     $sourceWin10 = 'C:\Users\ajay-winX\Music\keepass_all\mainKeysDB.kdbx'
     $destAndroid = 'C:\Users\ajay-winX\a_src\github\obs-root\.github\keepassxc-db\mainKeysDB.kdbx'
@@ -21,3 +22,4 @@ function keepass-merge{
     copy -verbose $sourceWin10 $destAndroid
     bcp
 }
+#>
