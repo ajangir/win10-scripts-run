@@ -1,0 +1,1 @@
+{"_id":"jan","startUrl":["https://janaushadhi.gov.in/productportfolio/ProductviewList"],"selectors":[{"id":"pages","parentSelectors":["_root","pages"],"paginationType":"auto","type":"SelectorPagination","selector":"button#pagination-next-page"},{"id":"table-inside","parentSelectors":["pages"],"type":"SelectorHTML","selector":"div.sc-dAbbbq","multiple":false,"regex":""}]}
