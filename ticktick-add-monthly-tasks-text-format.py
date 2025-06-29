@@ -15,12 +15,12 @@ PRESS_DELAY=1
 WRITE_DELAY=1
 HOTKEY_DELAY=2
 
-def write(text):
+def keyboard_write(text):
     pyautogui.write(text)
     time.sleep(WRITE_DELAY)
     return
 
-def press(key,presses=1):
+def keyboard_press(key,presses=1):
     global PRESS_COUNT
     PRESS_COUNT += 1
     if PRESS_COUNT >= 10:
@@ -33,7 +33,7 @@ def press(key,presses=1):
       time.sleep(PRESS_DELAY)
     
     return
-  
+
 def get_week_number_and_days(year, week_number):
     # Get the first day of the week
     first_day_of_week = datetime.date.fromisocalendar(year, week_number, 1)
@@ -44,7 +44,7 @@ def get_week_number_and_days(year, week_number):
 def createNewWeekToGo():
     pyautogui.hotkey('shift','enter')
     time.sleep(HOTKEY_DELAY)
-    press('up')
+    keyboard_press('up')
     pyautogui.click(1400, 260)
 
     
@@ -60,7 +60,7 @@ def simulate_keystrokes(year,week_number=SINGLE_WEEK_NO):
     end_date_str = f"{end_date.day:02d}{end_date.month:02d}"
     week_string = f"{year},{week_number:02d}={start_date_str}-{end_date_str}"
     
-    write(week_string)
+    keyboard_write(week_string)
     #make task medium priroty
     pyautogui.hotkey('alt','3');time.sleep(1)
     createNewWeekToGo()
@@ -69,14 +69,14 @@ def simulate_keystrokes(year,week_number=SINGLE_WEEK_NO):
 
     for day in week_days:
       week_number_str = f"{day.day:02d},{day.month:02d},{year2d} {day.month}-{day.day}"
-      write(week_number_str)
+      keyboard_write(week_number_str)
       #make task low priroty
       pyautogui.hotkey('alt','2');time.sleep(1)
-      press('enter')
+      keyboard_press('enter')
       if day != week_days[-1]:
-          press('enter')
+          keyboard_press('enter')
     
-    press('up',7)
+    keyboard_press('up',7)
     # For each day, press shift+enter and print 0=, 1=, 2=
     for day in week_days:
         pyautogui.hotkey('shift', 'enter')
@@ -87,13 +87,13 @@ def simulate_keystrokes(year,week_number=SINGLE_WEEK_NO):
         str3 = f"2= {day.month}-{day.day} 18:00-20:00"
         
         
-        write(str1)
-        press('enter');press('enter')
-        write(str2)
-        press('enter');press('enter')
-        write(str3)
-        press('enter')
-        press('down')
+        keyboard_write(str1)
+        keyboard_press('enter');keyboard_press('enter')
+        keyboard_write(str2)
+        keyboard_press('enter');keyboard_press('enter')
+        keyboard_write(str3)
+        keyboard_press('enter')
+        keyboard_press('down')
 
     return
 
@@ -111,28 +111,28 @@ def removeDateTask():
     for _ in range(3):
         pyautogui.hotkey('ctrl','0')
         time.sleep(2)
-        press('down')
+        keyboard_press('down')
     return
 
 #remove all task date from 0,1 and 2 task under daily tikcontroller
 def removeDamage():
     time.sleep(5)
     for _ in range(7):
-        press('down')
+        keyboard_press('down')
         removeDateTask()
     return
 
 def main():
     # Generate week strings
     year = datetime.date.today().year
-    #year = 2025
+    year = 2025
 
     # Simulate keystrokes
-    START_WEEK = 19
-    END_WEEK = 30
+    START_WEEK = 28
+    END_WEEK = 40
     for i in range(START_WEEK,END_WEEK+1):
         time.sleep(5.0)
-        press('enter')
+        keyboard_press('enter')
         simulate_keystrokes(year,i)
     return
     
