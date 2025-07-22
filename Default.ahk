@@ -42,13 +42,14 @@ return
 #Space::{
 CoordMode "Mouse", "Screen" ; This is needed to assure that you get your mouse coordinates related to the screen, not to the window
 MouseGetPos &MouseX, &MouseY
-if( MouseX > 1920) ; 1920x1080 of both monitors
+; move to laptop, monitor on left
+if( MouseX < 0) ; 1920x1080 of both monitors
 {
 MouseMove 960, 540
 }
 else
 {
-MouseMove A_ScreenWidth+960, 540
+MouseMove -960, 540
 }
 return
 }
