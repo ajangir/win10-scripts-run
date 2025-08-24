@@ -225,6 +225,7 @@ class WeekScheduler:
                 
                 self.stats['tasks_created'] += 1
             
+            """
             # Navigate back up
             if not self.safe_keyboard_press('up', 7):
                 return False
@@ -254,12 +255,12 @@ class WeekScheduler:
                         continue
                     if i < len(self.config.time_slots) - 1 and not self.safe_keyboard_press('enter'):
                             continue
-                    
+                     
                 if not self.safe_keyboard_press('down'):
                     continue
                 
                 self.stats['tasks_created'] += 3  # 3 time slots per day
-            
+                """
             self.stats['weeks_processed'] += 1
             self.logger.info(f"Successfully processed week {week_number}")
             return True
@@ -416,6 +417,7 @@ def main():
     
     # Load configuration
     config = load_config(args.config)
+
     
     # Create scheduler instance
     scheduler = WeekScheduler(config)
