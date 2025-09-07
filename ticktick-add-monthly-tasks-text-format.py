@@ -190,7 +190,10 @@ class WeekScheduler:
             
             start_date_str = f"{start_date.day:02d}{start_date.month:02d}"
             end_date_str = f"{end_date.day:02d}{end_date.month:02d}"
-            week_string = f"{year},{week_number:02d}={start_date_str}-{end_date_str} {end_date.month}-{end_date.day}"
+            # week_string = f"{year},{week_number:02d}={start_date_str}-{end_date_str} {end_date.month}-{end_date.day}"
+            # having errors when dash is used, picks another string than intended as result
+            
+            week_string = f"{year},{week_number:02d}={start_date_str}-{end_date_str}"
             
             # Write week header
             if not self.safe_keyboard_write(week_string):
