@@ -13,14 +13,14 @@
     
     ; Press Alt+f
     Send "!f"
-    sleep 1000 ; Sleep for 2 seconds
+    sleep 2000 ; Sleep for 2 seconds
 
     if WinExist("Subtitles")
 		WinActivate
     
     ; Click on specific pixel (adjust x, y coordinates as needed)
 
-    sleep 2000  ; Optional: small sleep before pressing Enter
+    sleep 4000  ; Optional: small sleep before pressing Enter
     Click
     ; Press Enter key
     Send "{Enter}"
