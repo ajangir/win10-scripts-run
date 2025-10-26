@@ -2,6 +2,8 @@
 """
 Enhanced Week Scheduler Script
 Automates the creation of weekly schedules with proper logging and error handling.
+python .\ticktick-add-monthly-tasks-text-format.py --start-week 53 --end-week 53
+python .\ticktick-add-monthly-tasks-text-format.py --year 2026 --start-week 1 --end-week 4
 """
 
 import random
